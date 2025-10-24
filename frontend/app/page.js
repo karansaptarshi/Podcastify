@@ -3,6 +3,7 @@
 import { useState } from "react";
 import UploadSection from "@/components/UploadSection";
 import LoadingMessage from "@/components/LoadingMessage";
+import Link from "next/link";
 
 export default function UploadPage() {
   const [loading, setLoading] = useState(false);
@@ -15,6 +16,7 @@ export default function UploadPage() {
         <UploadSection loading={loading} setLoading={setLoading} />
         <LoadingMessage loading={loading} />
       </div>
+      <Link href="/output" className="text-gray-700">To audio output</Link>
     </div>
   );
 }
