@@ -1,6 +1,6 @@
 "use client";
 
-import UploadButton from "@/components/UploadButton";
+import UploadSection from "@/components/UploadSection";
 
 export default function UploadPage() {
   return (
@@ -9,7 +9,7 @@ export default function UploadPage() {
         <h1 className="text-2xl font-bold text-center mb-6">
           Upload a PDF File
         </h1>
-        <UploadButton />
+        <UploadSection />
       </div>
     </div>
   );
