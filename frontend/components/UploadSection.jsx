@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import UploadButton from "./UploadButton";
+import GenerateButton from "./GenerateButton";
 
-export default function UploadSection() {
+export default function UploadSection({ loading, setLoading }) {
   const [fileName, setFileName] = useState("");
 
   const handleFileChange = (e) => {
@@ -23,7 +23,7 @@ export default function UploadSection() {
       {fileName && (
         <p className="text-gray-700 text-sm">📄 Selected: {fileName}</p>
       )}
-      <UploadButton fileName={fileName} />
+      <GenerateButton fileName={fileName} loading={loading} setLoading={setLoading} />
     </div>
   );
 }
