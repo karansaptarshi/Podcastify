@@ -1,7 +1,7 @@
 const GenerateButton = ({ fileName, loading, setLoading }) => {
    return (
       <>
-         {fileName && (<button className="text-gray-700 rounded-lg cursor-pointer bg-gray-400" disabled={loading} onClick={async () => {
+         {fileName && !loading && (<button className="text-gray-700 rounded-lg cursor-pointer bg-gray-400" disabled={loading} onClick={async () => {
             setLoading(true);
             // const result = await fetch("/api/generate", { method: "POST" })
 
