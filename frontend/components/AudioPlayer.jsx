@@ -18,7 +18,7 @@ const AudioPlayer = () => {
                audioReference.current.play();
                setPlaying(true);
             }
-         }} >{isPlaying ? "Pause" : "Play"}</button>
+         }} className="bg-gray-300 cursor-pointer rounded-lg">{isPlaying ? "Pause" : "Play"}</button>
       </div>
    )
 }
