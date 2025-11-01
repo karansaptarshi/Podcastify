@@ -14,9 +14,7 @@ export default function UploadPage() {
           Upload a PDF File
         </h1>
         <UploadSection loading={loading} setLoading={setLoading} />
-        <LoadingMessage loading={loading} />
       </div>
-      <Link href="/output" className="text-gray-700">To audio output</Link>
     </div>
   );
 }
