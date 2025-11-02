@@ -14,20 +14,19 @@ const GenerateButton = ({ file, loading, setLoading }) => {
          setErr("Upload failed");
          return;
       }
-      const { job } = await result.json();
-      router.push(`/output?job=${job}`);
+      const data = await result.json();
+      router.push(`/output?job=${data.job}`);
       setLoading(false);
    }
-   return (<>
-      {
-         file && !loading &&
-         <button className="text-gray-700 rounded-lg cursor-pointer bg-gray-400" onClick={onClick} disabled={loading}>
-            Generate podcast
-         </button>
-      }
-   </>
-
-   )
+   return (
+      <>
+         {
+            file && !loading &&
+            <button className="text-gray-700 rounded-lg cursor-pointer bg-gray-400" onClick={onClick} disabled={loading}>
+               Generate podcast
+            </button>
+         }
+      </>)
 }
 
 export default GenerateButton
