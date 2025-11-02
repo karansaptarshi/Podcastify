@@ -22,6 +22,7 @@ export async function POST(req: Request) {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
+    // should probably save the pdf somewhere else e.g. in root dir
     const uploadsDir = path.join(process.cwd(), "app", "uploads");
     if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir);
 

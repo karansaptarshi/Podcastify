@@ -35,7 +35,8 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx",
-    "components/UploadSection.jsx"
+    "components/UploadSection.jsx",
+    "components/AudioPlayer.tsx"
   ],
   "exclude": [
     "node_modules"
