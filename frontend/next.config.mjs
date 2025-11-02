@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  /* config options here */
+  reactCompiler: true,
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
+  }
 };
 
 export default nextConfig;
